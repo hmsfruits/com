@@ -59,7 +59,7 @@ body {
 }
 
 .logo-img {
-    height: 100px;
+    height: 200px;
     width: auto;
     object-fit: contain;
     transition: transform 0.3s;
@@ -625,6 +625,16 @@ body {
     }
 }
 
+@media screen and (max-width: 968px) {
+    /* existing code... */
+    
+    .home-img-bg {
+        width: 400px;
+        height: 400px;
+    }
+}
+
+
 @media screen and (max-width: 576px) {
     .home-title {
         font-size: 2rem;
@@ -635,19 +645,19 @@ body {
     }
 
     .logo-img {
-        height: 55px;
+        height: 70px;
     }
 
     .nav {
-        height: 70px;
+        height: 90px;
     }
     
     .home {
-        margin-top: 70px;
+        margin-top: 90px;
     }
 
     .home-img-bg {
-        width: 280px;
-        height: 280px;
+        width: 320px;
+        height: 320px;
     }
 }
