@@ -626,14 +626,6 @@ body {
     }
 }
 
-@media screen and (max-width: 968px) {
-    /* existing code... */
-    
-    .home-img-bg {
-        width: 400px;
-        height: 400px;
-    }
-}
 
 
 @media screen and (max-width: 576px) {
