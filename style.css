@@ -1,4 +1,12 @@
-<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
+/* Custom Font - Rubik Semi Bold */
+@font-face {
+    font-family: 'Rubik';
+    src: url('fonts/Rubik-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
 
 * {
     margin: 0;
