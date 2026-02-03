@@ -1,3 +1,5 @@
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
+
 * {
     margin: 0;
     padding: 0;
@@ -68,13 +70,15 @@ body {
 }
 
 .logo-text {
+    font-family: 'Rubik', sans-serif;
     font-size: 1.8rem;
-    font-weight: 700;
+    font-weight: 600;
     color: #D94A3D;
     text-transform: lowercase;
     letter-spacing: -0.5px;
     margin-left: -0.2rem;
 }
+
 
 
 .logo-img:hover {
@@ -146,6 +150,13 @@ body {
     padding: 4rem 0;
 }
 
+/* Mobile adjustments */
+@media screen and (max-width: 576px) {
+    .home {
+        padding: 1.5rem 0;
+        min-height: auto;
+    }
+}
 
 .home-container {
     display: grid;
@@ -157,10 +168,14 @@ body {
 .home-title {
     font-size: 3.5rem;
     font-weight: 700;
-    color: var(--dark-color);
+    background: linear-gradient(135deg, #2c2c2c 0%, #D94A3D 50%, #FF9800 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
     margin-bottom: 1rem;
     line-height: 1.2;
 }
+
 
 .home-subtitle {
     font-size: 2rem;
@@ -670,6 +685,18 @@ body {
 
 
 @media screen and (max-width: 576px) {
+    /* Hide hero image on mobile */
+    .home-img {
+        display: none;
+    }
+    
+    /* Remove extra spacing */
+    .home {
+        margin-top: 85px;
+        padding: 2rem 0 2rem 0;
+        min-height: auto;
+    }
+    
     .container {
         padding: 0 0.8rem;
     }
@@ -691,43 +718,50 @@ body {
         font-size: 1.4rem;
         margin-left: -0.1rem;
     }
-
-    
-    .nav-link {
-        padding: 0.6rem 1.2rem;
-        font-size: 0.95rem;
-    }
-
     
     .nav-toggle {
         font-size: 1.5rem;
         padding: 0.5rem;
         margin-left: auto;
     }
-    
-    .home {
-        margin-top: 80px;
-        padding: 2rem 0;
-    }
 
     .home-title {
-        font-size: 1.8rem;
+        font-size: 2rem;
+        margin-bottom: 1rem;
     }
     
     .home-subtitle {
-        font-size: 1.3rem;
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
+    }
+    
+    .home-description {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
     }
 
     .section-title {
         font-size: 1.8rem;
     }
 
-      .home-img {
-        display: none;
+    .home-img-bg {
+        width: 280px;
+        height: 280px;
+    }
+    
+    .hero-fruit-img {
+        width: 90%;
+        height: 90%;
     }
     
     .button {
         font-size: 0.9rem;
         padding: 0.9rem 1.5rem;
     }
+    
+    .section {
+        padding: 3rem 0;
+    }
+}
+
 }
