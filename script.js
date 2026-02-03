@@ -159,3 +159,20 @@ style.textContent = `
     }
 `;
 document.head.appendChild(style);
+
+// Highlight active navigation link
+document.addEventListener('DOMContentLoaded', function() {
+    const currentLocation = window.location.hash || '#home';
+    const navLinks = document.querySelectorAll('.nav-link');
+    
+    navLinks.forEach(link => {
+        if (link.getAttribute('href') === currentLocation) {
+            link.classList.add('active');
+        }
+        
+        link.addEventListener('click', function() {
+            navLinks.forEach(l => l.classList.remove('active'));
+            this.classList.add('active');
+        });
+    });
+});
