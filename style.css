@@ -175,14 +175,16 @@ body {
 
 .home-title {
     font-size: 3.5rem;
-    font-weight: 700;
-    background: linear-gradient(135deg, #2c2c2c 0%, #D94A3D 50%, #FF9800 100%);
+    font-weight: 800;
+    background: linear-gradient(135deg, #D94A3D 0%, #FF9800 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     margin-bottom: 1rem;
     line-height: 1.2;
+    letter-spacing: -1px;
 }
+
 
 
 .home-subtitle {
