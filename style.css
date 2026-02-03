@@ -189,11 +189,12 @@ body {
 
 .home-subtitle {
     font-size: 2rem;
-    color: var(--primary-color);
+    color: #FF9800;
     margin-bottom: 1.5rem;
     font-weight: 600;
     text-transform: lowercase;
 }
+
 
 .home-description {
     font-size: 1.1rem;
