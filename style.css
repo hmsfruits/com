@@ -45,7 +45,7 @@ body {
 }
 
 .nav {
-    height: 80px;
+    height: 120px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -100,13 +100,14 @@ body {
 
 /* Hero Section */
 .home {
-    margin-top: 80px;
-    min-height: calc(100vh - 80px);
+    margin-top: 120px;
+    min-height: calc(100vh - 120px);
     background: linear-gradient(135deg, #ffffff 0%, #fff5f0 50%, #fef9e7 100%);
     display: flex;
     align-items: center;
     padding: 4rem 0;
 }
+
 
 .home-container {
     display: grid;
