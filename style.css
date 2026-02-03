@@ -722,14 +722,8 @@ body {
         font-size: 1.8rem;
     }
 
-    .home-img-bg {
-        width: 280px;
-        height: 280px;
-    }
-    
-    .hero-fruit-img {
-        width: 90%;
-        height: 90%;
+      .home-img {
+        display: none;
     }
     
     .button {
