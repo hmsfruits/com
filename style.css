@@ -205,7 +205,6 @@ body {
 .home-img-bg {
     width: 400px;
     height: 400px;
-    background: radial-gradient(circle, rgba(217, 74, 61, 0.1) 0%, rgba(255, 152, 0, 0.08) 50%, rgba(124, 179, 66, 0.05) 100%);
     border-radius: 50%;
     position: relative;
     display: flex;
