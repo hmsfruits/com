@@ -459,6 +459,7 @@ body {
     background: var(--white-color);
 }
 
+/* Contact Section - Desktop */
 .contact-content {
     display: grid;
     grid-template-columns: 1fr 1.5fr;
@@ -700,8 +701,9 @@ body {
         font-size: 1.5rem;
     }
 
-    .contact-content {
-        grid-template-columns: 1fr;
+   .contact-content {
+        grid-template-columns: 1fr 1.5fr;
+        gap: 2rem;
     }
 }
 
@@ -726,6 +728,19 @@ body {
     .nav-toggle {
         display: flex;
         font-size: 1.5rem;
+    }
+
+     .contact-content {
+        grid-template-columns: 1fr 1.2fr;
+        gap: 1.5rem;
+    }
+    
+    .contact-card {
+        padding: 1.2rem;
+    }
+    
+    .contact-icon {
+        font-size: 2rem;
     }
 }
 
@@ -805,6 +820,11 @@ body {
 
     .section {
         padding: 3rem 0;
+    }
+
+  .contact-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
     }
 }
 
