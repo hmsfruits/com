@@ -176,3 +176,44 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+// Mobile Menu Toggle
+const navMenu = document.getElementById('nav-menu');
+const navToggle = document.getElementById('nav-toggle');
+const navClose = document.getElementById('nav-close');
+
+// Open menu
+if (navToggle) {
+    navToggle.addEventListener('click', () => {
+        navMenu.classList.add('show-menu');
+    });
+}
+
+// Close menu with X button
+if (navClose) {
+    navClose.addEventListener('click', () => {
+        navMenu.classList.remove('show-menu');
+    });
+}
+
+// Close menu when clicking hamburger again
+if (navToggle) {
+    navToggle.addEventListener('click', () => {
+        navMenu.classList.toggle('show-menu');
+    });
+}
+
+// Close menu when clicking outside
+document.addEventListener('click', (e) => {
+    if (!navMenu.contains(e.target) && !navToggle.contains(e.target)) {
+        navMenu.classList.remove('show-menu');
+    }
+});
+
+// Close menu when clicking nav links
+const navLinks = document.querySelectorAll('.nav-link');
+navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        navMenu.classList.remove('show-menu');
+    });
+});
