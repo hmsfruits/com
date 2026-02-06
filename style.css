@@ -456,12 +456,16 @@ body {
 }
 
 .contact-card {
+    display: block;
     padding: 1.5rem;
     background: linear-gradient(135deg, #ffffff 0%, #fff8f0 100%);
     border-radius: 15px;
     text-align: center;
     transition: all 0.3s;
     border: 2px solid transparent;
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
 }
 
 .contact-card:hover {
@@ -469,6 +473,12 @@ body {
     box-shadow: var(--shadow);
     border-color: var(--primary-color);
 }
+
+.contact-detail {
+    cursor: pointer;
+    color: #666;
+}
+
 
 .contact-icon {
     font-size: 2.5rem;
