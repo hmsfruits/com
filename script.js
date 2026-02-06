@@ -73,8 +73,19 @@ if (contactForm) {
         const phone = document.getElementById('phone').value;
         const message = document.getElementById('message').value;
         
-        const subject = `Enquiry from ${name}`;
-        const body = `Name: ${name}%0D%0AEmail: ${email}%0D%0APhone: ${phone}%0D%0A%0D%0AMessage:%0D%0A${message}`;
+        const subject = `Enquiry from ${name} - HMS Fruits`;
+        
+        // Properly formatted email body with line breaks
+        const body = 
+            `CUSTOMER ENQUIRY%0D%0A` +
+            `━━━━━━━━━━━━━━━━━━━━━━━━━━━━━%0D%0A%0D%0A` +
+            `Name: ${name}%0D%0A` +
+            `Email: ${email}%0D%0A` +
+            `Phone: ${phone}%0D%0A%0D%0A` +
+            `MESSAGE:%0D%0A` +
+            `${message}%0D%0A%0D%0A` +
+            `━━━━━━━━━━━━━━━━━━━━━━━━━━━━━%0D%0A` +
+            `Sent from HMS Fruits Website`;
         
         const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=hmsfruitcompany@gmail.com&su=${encodeURIComponent(subject)}&body=${body}`;
         window.open(gmailUrl, '_blank');
@@ -83,6 +94,7 @@ if (contactForm) {
         contactForm.reset();
     });
 }
+
 
 // WhatsApp Button
 if (whatsappBtn) {
