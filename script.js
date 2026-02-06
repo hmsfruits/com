@@ -3,19 +3,29 @@ const navMenu = document.getElementById('nav-menu');
 const navToggle = document.getElementById('nav-toggle');
 const navClose = document.getElementById('nav-close');
 
+// Toggle menu open/close with hamburger
 if (navToggle) {
-    navToggle.addEventListener('click', () => {
-        navMenu.classList.add('show-menu');
+    navToggle.addEventListener('click', (e) => {
+        e.stopPropagation(); // Prevent document click from firing
+        navMenu.classList.toggle('show-menu');
     });
 }
 
+// Close menu with X button
 if (navClose) {
     navClose.addEventListener('click', () => {
         navMenu.classList.remove('show-menu');
     });
 }
 
-// Close menu when clicking on nav links
+// Close menu when clicking outside
+document.addEventListener('click', (e) => {
+    if (!navMenu.contains(e.target) && !navToggle.contains(e.target)) {
+        navMenu.classList.remove('show-menu');
+    }
+});
+
+// Close menu when clicking nav links
 const navLinks = document.querySelectorAll('.nav-link');
 navLinks.forEach(link => {
     link.addEventListener('click', () => {
@@ -66,14 +76,10 @@ if (contactForm) {
         const subject = `Enquiry from ${name}`;
         const body = `Name: ${name}%0D%0AEmail: ${email}%0D%0APhone: ${phone}%0D%0A%0D%0AMessage:%0D%0A${message}`;
         
-        // Open Gmail compose in new tab/window (works on mobile & desktop)
         const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=hmsfruitcompany@gmail.com&su=${encodeURIComponent(subject)}&body=${body}`;
         window.open(gmailUrl, '_blank');
         
-        // Show success message
         showNotification('Redirecting to email...', 'success');
-        
-        // Reset form
         contactForm.reset();
     });
 }
@@ -97,10 +103,7 @@ if (whatsappBtn) {
         whatsappMsg += `*Phone:* ${phone}%0A%0A`;
         whatsappMsg += `*Message:*%0A${message}`;
         
-        // Replace with your WhatsApp number (format: country code + number, no + or spaces)
-        window.open(`https://wa.me/919876543210?text=${whatsappMsg}`, '_blank');
-        
-        // Reset form
+        window.open(`https://wa.me/919741741114?text=${whatsappMsg}`, '_blank');
         contactForm.reset();
     });
 }
@@ -174,46 +177,5 @@ document.addEventListener('DOMContentLoaded', function() {
             navLinks.forEach(l => l.classList.remove('active'));
             this.classList.add('active');
         });
-    });
-});
-
-// Mobile Menu Toggle
-const navMenu = document.getElementById('nav-menu');
-const navToggle = document.getElementById('nav-toggle');
-const navClose = document.getElementById('nav-close');
-
-// Open menu
-if (navToggle) {
-    navToggle.addEventListener('click', () => {
-        navMenu.classList.add('show-menu');
-    });
-}
-
-// Close menu with X button
-if (navClose) {
-    navClose.addEventListener('click', () => {
-        navMenu.classList.remove('show-menu');
-    });
-}
-
-// Close menu when clicking hamburger again
-if (navToggle) {
-    navToggle.addEventListener('click', () => {
-        navMenu.classList.toggle('show-menu');
-    });
-}
-
-// Close menu when clicking outside
-document.addEventListener('click', (e) => {
-    if (!navMenu.contains(e.target) && !navToggle.contains(e.target)) {
-        navMenu.classList.remove('show-menu');
-    }
-});
-
-// Close menu when clicking nav links
-const navLinks = document.querySelectorAll('.nav-link');
-navLinks.forEach(link => {
-    link.addEventListener('click', () => {
-        navMenu.classList.remove('show-menu');
     });
 });
